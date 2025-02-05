@@ -1,0 +1,89 @@
+.body {
+    color: var(--primary-text-color);
+    margin-top: 3.125rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.proyect {
+    background-color: var(--transparent-background);
+    padding: 1.875rem;
+
+    ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: var(--primary-text-color);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            fa-icon {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+}
+
+.proyectImage {
+    margin: 0 auto 1.875rem auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    max-width: 25rem;
+    height: 15.625rem;
+    background-color: var(--transparent-background);
+    border: 0.1875rem solid var(--border-color);
+
+    a {
+        display: block;
+        height: 100%;
+    }
+
+    &:hover {
+        transform: scale(105%);
+        background-position: 50% 50%;
+        border: 0;
+        animation: zoomIn 20s forwards;
+    }
+
+
+}
+
+@keyframes zoomIn {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 120%;
+    }
+}
+
+.title {
+    display: flex;
+
+    p {
+        margin: 1.33rem 0.3125rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .proyectImage {
+        max-width: 62.5rem;
+        height: 35.1875rem;
+        background-position: 50% 90%;
+    }
+}

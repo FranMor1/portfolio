@@ -1,0 +1,149 @@
+.header-project {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-primary);
+}
+
+.header-project h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.header-project h2 {
+    color: var(--secondary-color);
+}
+
+.back-button-container {
+    text-align: left;
+    margin: 10px 20px;
+}
+
+.back-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background-color);
+    font-family: var(--font-primary);
+}
+
+.back-button:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: var(--font-primary);
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.text-section {
+    padding: 20px;
+}
+
+.text-section p {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--background-color);
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #2d916c;
+}
+
+/* Media Queries */
+
+/* Pantallas medianas */
+@media (max-width: 1024px) {
+    .header-project h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-project h2 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+
+    .text-section p {
+        font-size: 1.1rem;
+    }
+
+    .button a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    .header-project h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-project h2 {
+        font-size: 1.2rem;
+    }
+
+    .back-button-container {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .back-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .button a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}

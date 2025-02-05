@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { IProyects } from '../../interfaces/study.interface';
+import { StoryService } from '../../services/studies.service';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [],
+  selector: 'app-proyects',
+  imports: [FontAwesomeModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProyectsComponent {
+
+  faGithub = faGithub;
+
+  arrProyects: IProyects[] = [];
+
+  storyService = inject(StoryService);
+
+  async ngOnInit() {
+    try {
+      this.arrProyects = await this.storyService.getAllProyects();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
 }

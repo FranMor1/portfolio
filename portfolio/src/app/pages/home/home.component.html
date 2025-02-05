@@ -1,0 +1,170 @@
+<!-- NAV BAR -->
+<app-navbar></app-navbar>
+
+<!-- HERO -->
+<div class="portfolio-container">
+    <div class="hello">
+        <h1>
+            <span class="arrow">=></span> Hola, <br>
+            <span class="bracket">&#123;</span> soy <span class="bracket">&#125;</span>
+        </h1>
+        <h2>Nuria <span class="caret">=</span></h2>
+        <p class="quote">Full Stack Developer<span class="cacharro">/</span></p>
+        <p class="quote">UX/UI Designer<span class="cacharro">/</span></p>
+        <p class="quote">SEM & Social Ads<span class="cacharro">;</span></p>
+        <div class="buttons">
+            <a class="btn btn-work" href="#proyectos">Proyectos</a>
+        </div>
+
+        <div class=" experience">
+            <p><strong>Junior</strong> en busca de oportunidades laborales</p>
+            <p><strong>{{arrProjects.length}}</strong> Proyectos</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/nuriafernandezz/" target="_blank" class="linkedin">
+                <img src="images/mdi_linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/nuria-cmyk" target="_blank">
+                <img src="images/Vector-1.svg" alt="GitHub" />
+            </a>
+            <a href="mailto:nuria.fernandez.val@gmail.com">
+                <img src="images/Vector.svg" alt="Email" />
+            </a>
+        </div>
+
+    </div>
+    <div class="photo">
+        <img src="images/Portfolio__5.png" alt="Nuria" />
+    </div>
+</div>
+
+<!-- SOBRE MI -->
+<div class="about-me-container" id="sobremi">
+    <div class="about-me-columns">
+
+        <div class="about-me-description">
+            <p>
+                🚀 Arquitecta de experiencias digitales que cautivan: como <strong>Desarrolladora Web Full Stack
+                </strong>con un enfoque
+                en <strong>UX/UI</strong>, me
+                apasiona transformar ideas en soluciones prácticas y atractivas. Cada diseño y cada línea de código
+                están pensados para
+                que la tecnología no solo funcione, sino que <strong>conecte con las personas</strong> de forma
+                intuitiva y memorable.
+            </p>
+
+            <p>
+                ✨ Creativa, siempre con la cabeza llena de ideas y lista para el trabajo en equipo. Me encanta colaborar
+                en proyectos
+                donde diseño, tecnología y estrategia se unan para hacer algo que realmente impacte. ¡Porque siempre hay
+                espacio para
+                mejorar y sorprender!
+            </p>
+        </div>
+        <div class="about-me-title">
+            <h2>Sobre mí</h2>
+        </div>
+    </div>
+</div>
+
+<div class="studies-container">
+    <div class="studies-columns">
+        <div class="studies-title">
+            <h2>Mis Estudios</h2>
+        </div>
+        <div class="timeline">
+            @for (studies of arrStudies; track studies._id ) {
+            <div class="timeline-item">
+                <h4>{{studies.startDate | date: 'MMMM y' }} - {{studies.finishDate | date: 'MMMM y'}}</h4>
+                <p>{{studies.title}} - {{studies.school}}</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="skills-section">
+    <div class="skills-header">
+        <span class="icon">🛠️</span>
+        <h2>Key Skills</h2>
+    </div>
+    <p class="skills-description">
+        Estos son algunos de los lenguajes y frameworks principales que he estado utilizando, y que seguiré ampliando a
+        medida
+        que profundizo en mi aprendizaje:
+    </p>
+    <div class="skills-container">
+        <div class="skill">JavaScript</div>
+        <div class="skill">Angular</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Typescript</div>
+        <div class="skill">NodeJS</div>
+        <div class="skill">ExpressJS</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Git/GitHub</div>
+    </div>
+</div>
+
+<!-- Experiencia -->
+
+<div class="experience-section">
+    <h2>🖥️ Experiencia Laboral</h2>
+
+    @for (experience of arrExperiences; let i = $index; track experience._id) {
+    <div class="experience-item">
+        <div class="experience-header" (click)="toggleContent(i)">
+            <span>{{ experience.title }}</span>
+            <span class="date">{{ experience.startDate | date: 'MMMM y' }} - {{ experience.finishDate | date: 'MMMM y'
+                }}</span>
+            <button class="toggle-button">
+                {{ isOpen[i] ? '−' : '+' }}
+            </button>
+        </div>
+        <div class="experience-content" [style.display]="isOpen[i] ? 'block' : 'none'">
+            <p class="empresa"><strong>{{ experience.company }}</strong></p>
+            <p>
+                {{ experience.description }}
+            </p>
+            <div class="tags">
+                @for (tool of experience.tools; track $index) {
+                <span>{{ tool }}</span>
+                }
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+<!-- MIS PROYECTOS -->
+
+<div class="projects-section" id="proyectos">
+    <h2>🚀 Mis Proyectos</h2>
+
+    <!-- Añadir en un futuro -->
+    <!--     <div class="filter">
+        <span>Filtrar por </span>
+        <button class="filter-btn">Todos</button>
+        <button class="filter-btn">Desarrollo</button>
+        <button class="filter-btn">Diseño</button>
+    </div> -->
+    <div class="projects-grid">
+        @for (project of arrProjects; track project._id) {
+        <div class="flip-card">
+            <div class="flip-card-inner" [routerLink]="['/projects/', project._id]">
+                <div class="flip-card-front">
+                    <img [src]="'http://localhost:3000/' + project.images[1]" [alt]="project.title">
+                </div>
+                <div class="flip-card-back">
+                    <h1>{{project.title}}</h1>
+                    <p>{{project.description}}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+<!-- FOOTER -->
+<app-footer></app-footer>

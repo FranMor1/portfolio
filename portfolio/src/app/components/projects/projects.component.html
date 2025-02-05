@@ -1,1 +1,31 @@
-<p>projects works!</p>
+<div class="body">
+    <h2>MIS PROYECTOS</h2>
+    @if(arrProyects.length === 0) {
+    <div class="proyect">
+        <p>Cargando...</p>
+        <p>La información se mostrará en menos de un minuto.</p>
+    </div>
+    } @else {
+    @for(proyect of arrProyects; track proyect._id){
+    <div class="proyect">
+        <div class="title">
+            <h4>{{proyect.title}} </h4>
+            <p> | {{proyect.year}}</p>
+        </div>
+        <p>Descripción: {{proyect.description}}</p>
+        <p>Repositorios:</p>
+        <ul>
+            <li><fa-icon [icon]="faGithub"></fa-icon><a href="{{proyect.github.back}}" target="_blank"> >> Back-End</a>
+            </li>
+            <li><fa-icon [icon]="faGithub"></fa-icon><a href="{{proyect.github.front}}" target="_blank"> >>
+                    Front-End</a></li>
+        </ul>
+        <div class="proyectImage" [style.background-image]="'url(' + proyect.image + ')'"><a href="{{proyect.link}}"
+                target="_blank"></a></div>
+        @if(!$last) {
+        <hr>
+        }
+    </div>
+    }
+    }
+</div>
