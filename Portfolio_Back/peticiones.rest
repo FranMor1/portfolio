@@ -1,0 +1,238 @@
+@host = http://localhost:3000/api
+
+GET {{host}}/experience
+
+###
+
+GET {{host}}/experience/1
+
+###
+POST {{host}}/experience
+Content-Type: application/json
+
+{
+  
+  "title": "Especialista PPC",
+  "company": "NeoAttack",
+  "startDate": "2023-03-12",
+  "finishDate": "2024-09-12",
+  "contract": "Prácticas remuneradas",
+  "description": "Diseño e implementación de campañas, gestión de contenidos en RRSS, keyword research, análisis de competencia, seguimiento y optimización de conversiones para campañas, creación de informes y maquetación de landings.",
+  "tools": [
+    "Google Ads",
+    "Meta Ads",
+    "Google Analytics",
+    "Data Studio",
+    "Metricool",
+    "Canva",
+    "Adobe Illustrator",
+    "Microsoft Ads",
+    "Tiktok Ads",
+    "Zoho",
+    "WordPress"
+  ]
+}
+
+###
+POST {{host}}/experience
+Content-Type: application/json
+
+{
+  
+  "title": "Diseñadora UX/UI",
+  "company": "InQidea Soluciones",
+  "startDate":  "2022-02-01",
+  "finishDate": "2022-10-01",
+  "contract": "Freelance",
+  "description": "Diseño UX/UI, prototipado y creación de flujos de usuario para las aplicaciones Noctuiz e InQidea, con investigación de mercado para optimizar la experiencia. Participación en reuniones semanales para el seguimiento y evolución del proyecto.",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe XD",
+    "Invision",
+    "Figma"
+  ]
+}
+
+###
+POST {{host}}/experience
+Content-Type: application/json
+
+{
+  
+  "title": "Diseñadora UX/UI",
+  "company": "Logixs",
+  "startDate":  "2021-06-01",
+  "finishDate": "2021-11-01",
+  "contract": "Prácticas remuneradas",
+  "description": "Diseño de experiencia de usuario e interfaces, creación de prototipos y wireframes, investigación de mercado y realización de tests de usabilidad para optimizar productos digitales.",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe XD",
+    "Invision"
+  ]
+}
+###
+POST {{host}}/experience
+Content-Type: application/json
+
+{
+  "title": "Diseñadora UX/UI",
+  "company": "Logixs",
+  "startDate": "2021-03-01",
+  "finishDate":  "2021-06-01",
+  "contract": "Contrato de formación",
+  "description": "Adquisición y profundización de conocimientos en UX/UI, manejo de herramientas de diseño, prototipado y usabilidad, incluyendo el paquete Adobe y la metodología Agile. Participación activa en proyectos de la empresa, así como en la creación y desarrollo de proyectos personales enfocados en la mejora de la experiencia del usuario.",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe XD",
+    "Invision"
+  ]
+}
+
+###
+
+GET {{host}}/studies
+
+###
+GET {{host}}/studies/1
+
+###
+POST {{host}}/studies
+Content-Type: application/json
+
+{
+  "title": "Curso Event Planner",
+  "school": "Cámara de Comercio Madrid",
+  "startDate":  "2024-04-01",
+  "finishDate": "2024-07-01"
+  
+}
+
+###
+POST {{host}}/studies
+Content-Type: application/json
+
+{
+  
+  "title": "Máster Marketing Digital",
+  "school": "Excuse Me Captain",
+  "startDate": "2022-09-01"
+  ,
+  "finishDate":"2023-03-01"
+  }
+  
+
+###
+POST {{host}}/studies
+Content-Type: application/json
+
+{
+  "title": "Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web",
+  "school": "IED Madrid",
+  "startDate": "2019-09-01"
+  ,
+  "finishDate": "2021-07-01"
+  }
+  
+###
+POST {{host}}/studies
+Content-Type: application/json
+
+{
+  "title": "Bootcamp Full Stack Developer",
+  "school": "ID Bootcamps",
+  "startDate": "2024-09-01"
+  ,
+  "finishDate": "2024-12-01"
+  }
+###
+
+GET {{host}}/projects
+
+###
+
+GET {{host}}/projects/1
+
+###
+POST {{host}}/projects
+Content-Type: application/json
+
+{
+  "title": "NocTuiz",
+  "description": "Diseño de app de gestión del tiempo en redes sociales para los hijos.",
+  "type": "Diseño",
+  "startDate": "2022-07-01",
+  "finishDate": "2022-10-30",
+  "technologies": [],
+  "longDescription": "Permite a los padres enseñar a sus hijos el buen uso y gestión del tiempo en las redes sociales y los videojuegos. De manera única, NocTuiz controla y bloquea todos los programas en el dispositivo. Para que tus hijos desbloqueen su tiempo digital, deben completar una serie de quizzes educativos según su grado académico, alcanzando así las metas establecidas por los padres y liberando tiempo de ocio.",
+  "tools": [
+    "Figma"
+  ],
+  "images": [
+    "Mockup-MobileNocTuiz.webp",
+    "noctuiz.png",
+    "Hola-sebastian.png",
+    "Noctuiz-login-1.png",
+    "Onboarding4.png",
+    "Quiza-scale3.png"
+  ],
+  "links": [
+    "https://inqideasoluciones.com/noctuiz/#"
+  ]
+}
+
+###
+POST {{host}}/projects
+Content-Type: application/json
+
+{
+
+  "title": "Pictome",
+  "description": "Diseño de app para el apoyo a las personas con TEA.",
+  "type": "Diseño",
+  "startDate":  "2021-04-01",
+  "finishDate":  "2021-06-30",
+  "technologies": [],
+  "longDescription": "Este proyecto consiste en el desarrollo de una aplicación de apoyo a las personas con TEA (Trastorno del Espectro Autista) a partir de la generación de pictogramas con fines comunicativos. Actualmente existe un amplio número de aplicaciones que ofrecen diversas funcionalidades. La idea fue fusionar las principales características que se encontraban atomizadas y dispersas, para ofrecer al usuario, familia y terapeutas, una herramienta multifuncional con la que poder realizar, de una manera sencilla y eficiente, las tareas de inclusión que necesitan estas personas con diversidad funcional.",
+  "tools": [
+    "Figma"
+  ],
+  "images": [
+    "pictomemockup.png",
+    "pictomelogoinicioapp.png"
+  ],
+  "links": [
+    "https://www.figma.com/proto/ymoDBtnPracVixaZSsGkal/PICTOME?page-id=0%3A1&node-id=478-1411&viewport=220%2C-78%2C0.06&t=d585ThP8T7ElDUGd-1&scaling=scale-down&content-scaling=fixed"
+  ]
+}
+###
+POST {{host}}/projects
+Content-Type: application/json
+
+{
+  "title": "Eira",
+  "description": "Diseño y desarrollo de la web y CRM de un hotel.",
+  "type": "Desarrollo",
+  "startDate": "2024-12-01",
+  "finishDate": "2024-12-31",
+  "technologies": [
+    "Angular",
+    "MySQL",
+    "Node.js"
+  ],
+  "longDescription": "Diseño y desarrollo integral para el hotel ficticio Eira, incluyendo su identidad visual, página web pública y un sistema CRM interno. La identidad visual fue creada para reflejar la esencia cálida y acogedora de un hotel en Tenerife, con un diseño moderno, colores inspirados en la naturaleza y una tipografía elegante.\n\nLa web pública ofrece una experiencia intuitiva y fluida, con un motor de reservas fácil de usar, secciones dedicadas a habitaciones y servicios. Paralelamente, el CRM interno permite gestionar reservas y habitaciones, optimizando las operaciones internas. Este proyecto combina diseño, funcionalidad y tecnología para ofrecer una experiencia completa y memorable tanto para huéspedes como para el equipo del hotel.",
+  "tools": [
+    "Visual Studio Code"
+  ],
+  "images": [
+    "eirahome.png",
+    "eiraa.png",
+    "EIRA.png"
+  ],
+  "links": [
+    "https://youtu.be/7MG11eK8ogY?si=tO2kfnaFULVitRUn"
+  ]
+}
