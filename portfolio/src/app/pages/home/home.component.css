@@ -390,35 +390,6 @@ a {
     gap: 3rem;
 }
 
-/* .filter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    align-items: center;
-}
-
-.filter span {
-    margin-right: 1rem;
-    font-size: 1.5rem;
-}
-
-.filter-btn {
-    background: none;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.3s;
-    font-family: var(--font-primary);
-}
-
-.filter-btn:hover {
-    background: var(--primary-color);
-    color: var(--background-color);
-}
- */
 .flip-card {
     background-color: transparent;
     width: 350px;
