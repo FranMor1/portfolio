@@ -4,15 +4,12 @@
 <!-- HERO -->
 <div class="portfolio-container">
     <div class="hello">
-        <h1>
-            <span class="arrow">=></span> Hola, <br>
-            <span class="bracket">&#123;</span> soy <span class="bracket">&#125;</span>
-        </h1>
-        <h2>Fran <span class="caret">=</span></h2>
-        <p class="quote">Full Stack Developer<span class="cacharro">/</span></p>
-        <p class="quote">Medical Sales<span class="cacharro">/</span></p>
-        <p class="quote">Medical Field Technical Engineer<span class="cacharro">/</span></p>
-        <p class="quote">Digital Marketing<span class="cacharro">;</span></p>
+
+        <h1>Fran Álvarez <span class="caret">mostri.dev</span></h1>
+        <h2 class="quote">Full Stack Developer<span class="cacharro">/</span></h2>
+        <h2 class="quote">Medical Sales<span class="cacharro">/</span></h2>
+        <h2 class="quote">Medical Field Technical Engineer<span class="cacharro">/</span></h2>
+        <h2 class="quote">Digital Marketing<span class="cacharro">;</span></h2>
         <div class="buttons">
             <a class="btn btn-work" href="#proyectos">Proyectos</a>
         </div>
@@ -63,7 +60,7 @@
             </p>
         </div>
         <div class="about-me-title">
-            <h2>Sobre mí</h2>
+            <h2>Background</h2>
         </div>
     </div>
 </div>
@@ -85,7 +82,6 @@
 </div>
 <div class="skills-section">
     <div class="skills-header">
-        <span class="icon">🛠️</span>
         <h2>Key Skills</h2>
     </div>
     <p class="skills-description">
@@ -105,11 +101,31 @@
         <div class="skill">Git/GitHub</div>
     </div>
 </div>
+<div class="skills-section">
+    <div class="skills-header">
+        <h2>Soft Skills</h2>
+    </div>
+    <p class="skills-description">
+        Estos son algunas de las soft skills que he desarroyado en estos años de experiencia:
+    </p>
+    <div class="skills-container">
+        <div class="skill">Comunicación</div>
+        <div class="skill">Trabajo en equipo</div>
+        <div class="skill">Adaptabilidad</div>
+        <div class="skill">Resolución de problemas</div>
+        <div class="skill">Pensamiento crítico</div>
+        <div class="skill">Creatividad</div>
+        <div class="skill">Gestión del tiempo</div>
+        <div class="skill">Empatía</div>
+        <div class="skill">Aprendeizaje continuo</div>
+        <div class="skill">Proactividad</div>
+    </div>
+</div>
 
 <!-- Experiencia -->
 
 <div class="experience-section">
-    <h2>🖥️ Experiencia Laboral</h2>
+    <h2>Experiencia Laboral</h2>
 
     @for (experience of arrExperiences; let i = $index; track experience._id) {
     <div class="experience-item">
@@ -141,13 +157,6 @@
 <div class="projects-section" id="proyectos">
     <h2>Mis Proyectos</h2>
 
-    <!-- Añadir en un futuro -->
-    <!--     <div class="filter">
-        <span>Filtrar por </span>
-        <button class="filter-btn">Todos</button>
-        <button class="filter-btn">Desarrollo</button>
-        <button class="filter-btn">Diseño</button>
-    </div> -->
     <div class="projects-grid">
         @for (project of arrProjects; track project._id) {
         <div class="flip-card">

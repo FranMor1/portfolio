@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { IProyects } from '../../interfaces/study.interface';
 import { StoryService } from '../../services/studies.service';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -8,9 +8,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   selector: 'app-proyects',
   imports: [FontAwesomeModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrls: ['./projects.component.css'] // Cambiado a styleUrls
 })
-export class ProyectsComponent {
+export class ProyectsComponent implements OnInit { // Implementa OnInit
 
   faGithub = faGithub;
 
